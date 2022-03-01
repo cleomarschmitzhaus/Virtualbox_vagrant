@@ -1,6 +1,6 @@
 # Virtualbox_vagrant
 
-### Repositório de arquivos Vagrantfile para provisionamento de ambientes
+### Repositório de arquivos Vagrantfile para provisionamento de ambientes para Fedora 34.
 
 #### instalação do Virtual box
 - Executar comandos como *root*.
