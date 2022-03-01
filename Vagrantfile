@@ -101,4 +101,19 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
   end
+  config.vm.define "ubuntu" do |ubuntu|
+    ubuntu.vm.box = "ubuntu/focal64"
+#    ubuntu.vm.network "private_network", ip: "192.168.122.101"
+#    ubuntu.vm.network "public_network"
+    ubuntu.vm.provision "shell", inline: <<-SHELL
+      apt update
+      apt install vim -y
+      apt install htop -y
+      echo "deucertooscrpt" > deucerto.txt
+    SHELL
+    ubuntu.vm.provider "virtualbox" do |vb|
+      vb.gui = false
+      vb.memory = "2048"
+    end
+  end
 end
