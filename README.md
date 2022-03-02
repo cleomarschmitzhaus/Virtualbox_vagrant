@@ -50,3 +50,30 @@ sudo usermod -a -G vboxusers $USER
 $ newgrp vboxusers
 $ id $USER
 ```
+
+### Instalando o Vagrant no Fedora 34
+
+- Executar comandos como *root*.
+```
+dnf -y update
+```
+
+- Instale o pacote 'dnf-plugins-core'.
+```
+dnf install -y dnf-plugins-core
+```
+
+- Adicione o repositório oficial da hashicorp.
+```
+dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+```
+
+- Instalar o Vagrant com o comando normal dnf install.
+```
+dnf -y install vagrant
+```
+
+- validando versão do Vagrant.
+```
+vagrant -v
+```
